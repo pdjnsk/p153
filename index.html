@@ -4,13 +4,11 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
     
-    <!-- IMPORTED COMPONENTS -->    
     <script src="./js/Rotation.js"></script>
     
   </head>
   <body>
     <a-scene >
-      <!---Assets-->
       <a-a-assets>
         <a-asset-item id="island" src="assets/island/scene.gltf"></a-asset-item>
 
@@ -27,9 +25,7 @@
           id="scuba_driver"
           src="assets/scuba_driver/scene.gltf"
         ></a-asset-item>
-      </a-a-assets>
-
-      <!-- Sky -->
+      </a-a-assets
       <a-sky
         geometry="primitive: sphere;"
         material="shader: gradient; bottomColor: #00009e; topColor:109 205 227;offset: 0.0001;"
@@ -37,17 +33,13 @@
         theta-length="180"
         side="double"
         animation="property: rotation; to: 0 300 0; easing:linear; loop: true; dur: 500000"
-      >
-        <!------------------------------------GLTF Models------------------------------------------>
-
-        <!--Island-->
+      
         <a-entity
           gltf-model="#island"
           scale="1 1 1"
           position="0 -15 -40"
         ></a-entity>
 
-        <!--Trasures-->
         <a-entity
           gltf-model="#treasure"
           scale="15 15 15"
@@ -68,8 +60,6 @@
           position="-15 -30 -40"
           rotation="0 90 0"
         ></a-entity>
-       
-        <!--Turtule-->
         <a-entity
           gltf-model="#turtle"
           scale="0.005 0.005 0.005"
@@ -78,7 +68,6 @@
         ></a-entity>
       </a-sky>
 
-      <!--Scuba Driver-->
       <a-entity
         gltf-model="#scuba_driver"
         scale="0.1 0.1 0.1"
@@ -96,8 +85,6 @@
       </a-entity>
 
       <a-cylinder color="#00009e" radius="100" opacity="0.2"></a-cylinder>
-
-      <!-- CAMERA -->
       <a-entity
         camera="active: true"
         look-controls
